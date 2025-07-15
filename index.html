@@ -15,20 +15,18 @@
       background-color: #f1f1f1;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
     }
 
     .main {
-      max-width: 600px;
+      max-width: 500px;
       width: 100%;
       background-color: white;
       margin: 0 auto;
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 8px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     .back {
@@ -67,7 +65,7 @@
       margin-bottom: 25px;
     }
 
-    /* Mobile-optimized table */
+    /* Compact table */
     .table-container {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -75,36 +73,37 @@
 
     table {
       width: 100%;
-      font-size: 15px;
+      font-size: 14px;
       border-collapse: collapse;
       word-break: break-word;
-      min-width: 300px;
     }
 
     th, td {
       border: 1px solid #ddd;
-      padding: 12px 10px;
+      padding: 8px 10px;
       vertical-align: top;
       text-align: left;
     }
 
     th {
-      width: 35%;
+      width: 40%;
       background-color: #f8f9fa;
       font-weight: 600;
       color: #333;
+      font-size: 13px;
     }
 
     td {
       background-color: white;
       color: #000;
       font-weight: 500;
+      font-size: 13px;
     }
 
     .photo-row {
       display: flex;
       align-items: flex-start;
-      gap: 15px;
+      gap: 12px;
       flex-wrap: nowrap;
     }
 
@@ -116,20 +115,20 @@
     }
 
     .photo-section img {
-      width: 60px;
-      height: 70px;
+      width: 50px;
+      height: 60px;
       border: 1px solid #ddd;
       object-fit: cover;
       border-radius: 3px;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .photo-under {
-      font-size: 13px;
+      font-size: 11px;
       color: #333;
       text-align: center;
-      line-height: 1.3;
-      max-width: 120px;
+      line-height: 1.2;
+      max-width: 100px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -139,16 +138,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 2px;
+      gap: 1px;
     }
 
     .student-name {
       font-weight: 600;
       color: #000;
+      font-size: 11px;
     }
 
     .student-id {
-      font-size: 12px;
+      font-size: 10px;
       color: #555;
     }
 
@@ -160,7 +160,7 @@
     }
 
     .photo-name {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 600;
       color: #000;
     }
@@ -170,17 +170,18 @@
       font-weight: bold;
     }
 
-    /* Enhanced mobile responsiveness */
+    /* Mobile responsiveness */
     @media (max-width: 600px) {
       body {
         padding: 5px;
-        align-items: flex-start;
       }
 
       .main {
         padding: 15px;
         border-radius: 0;
         margin-top: 10px;
+        margin-bottom: 10px;
+        max-width: 100%;
       }
 
       .title {
@@ -192,18 +193,18 @@
       }
 
       table {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       th, td {
-        padding: 10px 8px;
+        padding: 8px 6px;
+        font-size: 12px;
       }
 
-      /* Mobile-specific requester layout */
       .photo-row {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 8px;
         text-align: center;
       }
 
@@ -219,125 +220,5 @@
       }
 
       .photo-name {
-        font-size: 15px;
-        text-align: center;
-      }
+        font
 
-      .photo-under {
-        font-size: 12px;
-        max-width: none;
-      }
-
-      .student-name {
-        font-size: 12px;
-      }
-
-      .student-id {
-        font-size: 11px;
-      }
-    }
-
-    @media (max-width: 360px) {
-      th {
-        width: 30%;
-      }
-      
-      table {
-        font-size: 13px;
-      }
-      
-      .title {
-        font-size: 18px;
-      }
-    }
-
-    /* Better touch targets */
-    @media (pointer: coarse) {
-      .back {
-        padding: 15px 0;
-        font-size: 18px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="main">
-    <a href="#" class="back">&larr; Back</a>
-
-    <div class="logo">
-      <img src="photo2.png" alt="G-Sports Logo">
-    </div>
-
-    <h1 class="title">G-Sports</h1>
-    <div class="subtitle">Reservation Information</div>
-
-    <div class="table-container">
-      <table>
-        <tr>
-          <th>Ref. number</th>
-          <td>20250709815395</td>
-        </tr>
-        <tr>
-          <th>Stadium</th>
-          <td>Fitness & Performance Centre</td>
-        </tr>
-        <tr>
-          <th>Facility</th>
-          <td>Fitness & Performance Centre</td>
-        </tr>
-        <tr>
-          <th>Court</th>
-          <td>room 1</td>
-        </tr>
-        <tr>
-          <th>Requester</th>
-          <td>
-            <div class="photo-row">
-              <div class="photo-section">
-                <img src="photo1.png" alt="Student Photo">
-                <div class="photo-under">
-                  <div class="student-info">
-                    <span class="student-name">SREERAM SARMA</span>
-                    <span class="student-id">(2023006170-student)</span>
-                  </div>
-                </div>
-              </div>
-              <div class="photo-details">
-                <div class="photo-name">GADEPALLI SHANMUKHA</div>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <th>Request from</th>
-          <td>VSP - GIT - EECE</td>
-        </tr>
-        <tr>
-          <th>Mobile</th>
-          <td>9493027486</td>
-        </tr>
-        <tr>
-          <th>E-mail</th>
-          <td>sgadepal2@gitam.in</td>
-        </tr>
-        <tr>
-          <th>Reserved date</th>
-          <td class="green">10-Jul-2025</td>
-        </tr>
-        <tr>
-          <th>Reserved slot</th>
-          <td class="green">04:00 PM to 05:00 PM</td>
-        </tr>
-        <tr>
-          <th>Status</th>
-          <td class="green">Approved</td>
-        </tr>
-        <tr>
-          <th>Remarks</th>
-          <td>Approved</td>
-        </tr>
-      </table>
-    </div>
-  </div>
-</body>
-</html>
