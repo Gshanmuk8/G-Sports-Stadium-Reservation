@@ -11,7 +11,7 @@
 
     body {
       margin: 0;
-      padding: 10px;
+      padding: 0;
       background-color: #f1f1f1;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
@@ -65,7 +65,6 @@
       margin-bottom: 25px;
     }
 
-    /* Compact table */
     .table-container {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
@@ -170,46 +169,72 @@
       font-weight: bold;
     }
 
-    /* Mobile responsiveness */
-    @media (max-width: 600px) {
+    /* Mobile-first approach */
+    @media (max-width: 768px) {
       body {
-        padding: 5px;
+        padding: 0;
+        background-color: white;
       }
 
       .main {
-        padding: 15px;
+        padding: 10px;
         border-radius: 0;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin: 0;
+        box-shadow: none;
         max-width: 100%;
+        min-height: 100vh;
+      }
+
+      .back {
+        font-size: 18px;
+        color: #007bff;
+        margin-bottom: 10px;
       }
 
       .title {
-        font-size: 20px;
+        font-size: 18px;
+        margin: 5px 0;
       }
 
       .subtitle {
         font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .logo img {
+        height: 50px;
       }
 
       table {
-        font-size: 13px;
-      }
-
-      th, td {
-        padding: 8px 6px;
         font-size: 12px;
       }
 
+      th, td {
+        padding: 6px 8px;
+        font-size: 11px;
+      }
+
+      th {
+        width: 35%;
+      }
+
+      /* Mobile requester layout - exactly like first image */
       .photo-row {
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         text-align: center;
       }
 
       .photo-section {
         order: 1;
+        margin-bottom: 5px;
+      }
+
+      .photo-section img {
+        width: 40px;
+        height: 50px;
+        margin-bottom: 3px;
       }
 
       .photo-details {
@@ -220,5 +245,120 @@
       }
 
       .photo-name {
-        font
+        font-size: 12px;
+        text-align: center;
+        font-weight: 600;
+      }
+
+      .student-name {
+        font-size: 9px;
+        font-weight: 600;
+      }
+
+      .student-id {
+        font-size: 8px;
+      }
+
+      .photo-under {
+        font-size: 9px;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 360px) {
+      th {
+        width: 32%;
+      }
+      
+      table {
+        font-size: 11px;
+      }
+      
+      .title {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <a href="#" class="back">&larr; Back</a>
+
+    <div class="logo">
+      <img src="photo2.png" alt="G-Sports Logo">
+    </div>
+
+    <h1 class="title">G-Sports</h1>
+    <div class="subtitle">Reservation Information</div>
+
+    <div class="table-container">
+      <table>
+        <tr>
+          <th>Ref. number</th>
+          <td>20250709815395</td>
+        </tr>
+        <tr>
+          <th>Stadium</th>
+          <td>Fitness & Performance Centre</td>
+        </tr>
+        <tr>
+          <th>Facility</th>
+          <td>Fitness & Performance Centre</td>
+        </tr>
+        <tr>
+          <th>Court</th>
+          <td>room 1</td>
+        </tr>
+        <tr>
+          <th>Requester</th>
+          <td>
+            <div class="photo-row">
+              <div class="photo-section">
+                <img src="photo1.png" alt="Student Photo">
+                <div class="photo-under">
+                  <div class="student-info">
+                    <span class="student-name">SREERAM SARMA</span>
+                    <span class="student-id">(2023006170-student)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="photo-details">
+                <div class="photo-name">GADEPALLI SHANMUKHA</div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <th>Request from</th>
+          <td>VSP - GIT - EECE</td>
+        </tr>
+        <tr>
+          <th>Mobile</th>
+          <td>9493027486</td>
+        </tr>
+        <tr>
+          <th>E-mail</th>
+          <td>sgadepal2@gitam.in</td>
+        </tr>
+        <tr>
+          <th>Reserved date</th>
+          <td class="green">10-Jul-2025</td>
+        </tr>
+        <tr>
+          <th>Reserved slot</th>
+          <td class="green">04:00 PM to 05:00 PM</td>
+        </tr>
+        <tr>
+          <th>Status</th>
+          <td class="green">Approved</td>
+        </tr>
+        <tr>
+          <th>Remarks</th>
+          <td>Approved</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
 
