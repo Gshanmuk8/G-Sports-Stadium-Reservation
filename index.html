@@ -11,7 +11,7 @@
 
     body {
       margin: 0;
-      padding: 0;
+      padding: 15px;
       background-color: #f1f1f1;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.4;
@@ -25,8 +25,6 @@
       padding: 20px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
       border-radius: 8px;
-      margin-top: 20px;
-      margin-bottom: 20px;
     }
 
     .back {
@@ -169,36 +167,34 @@
       font-weight: bold;
     }
 
-    /* Mobile-first approach */
+    /* Mobile layout - keeping natural spacing like first photo */
     @media (max-width: 768px) {
       body {
-        padding: 0;
-        background-color: white;
+        padding: 10px;
+        background-color: #f1f1f1;
       }
 
       .main {
-        padding: 10px;
-        border-radius: 0;
-        margin: 0;
-        box-shadow: none;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
         max-width: 100%;
-        min-height: 100vh;
+        margin: 0 auto;
       }
 
       .back {
-        font-size: 18px;
-        color: #007bff;
+        font-size: 16px;
         margin-bottom: 10px;
       }
 
       .title {
-        font-size: 18px;
-        margin: 5px 0;
+        font-size: 20px;
+        margin: 8px 0;
       }
 
       .subtitle {
         font-size: 14px;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
 
       .logo img {
@@ -206,23 +202,23 @@
       }
 
       table {
-        font-size: 12px;
+        font-size: 13px;
       }
 
       th, td {
-        padding: 6px 8px;
-        font-size: 11px;
+        padding: 8px 6px;
+        font-size: 12px;
       }
 
       th {
         width: 35%;
       }
 
-      /* Mobile requester layout - exactly like first image */
+      /* Mobile requester layout - exactly like first photo */
       .photo-row {
         flex-direction: column;
         align-items: center;
-        gap: 6px;
+        gap: 8px;
         text-align: center;
       }
 
@@ -232,8 +228,8 @@
       }
 
       .photo-section img {
-        width: 40px;
-        height: 50px;
+        width: 45px;
+        height: 55px;
         margin-bottom: 3px;
       }
 
@@ -245,22 +241,22 @@
       }
 
       .photo-name {
-        font-size: 12px;
+        font-size: 13px;
         text-align: center;
         font-weight: 600;
       }
 
       .student-name {
-        font-size: 9px;
+        font-size: 10px;
         font-weight: 600;
       }
 
       .student-id {
-        font-size: 8px;
+        font-size: 9px;
       }
 
       .photo-under {
-        font-size: 9px;
+        font-size: 10px;
         max-width: none;
       }
     }
@@ -271,11 +267,11 @@
       }
       
       table {
-        font-size: 11px;
+        font-size: 12px;
       }
       
       .title {
-        font-size: 16px;
+        font-size: 18px;
       }
     }
   </style>
@@ -361,4 +357,3 @@
   </div>
 </body>
 </html>
-
